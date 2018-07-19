@@ -1,5 +1,5 @@
 
-/* English to Esperanto */
+/** English to Esperanto */
 const englishToEsperanto = (englishWord) => {
   dictionary = {
     'and': 'kaj',
