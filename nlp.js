@@ -63,5 +63,3 @@ const toPresentTense = (verb) => {
 const negate = (sentence) => {
   return sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
 }
-
-console.log(negate('estas alta'))
