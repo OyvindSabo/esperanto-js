@@ -45,3 +45,11 @@ const toPresentTense = verb => verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as
  * Currently doesn't handle commas or periods
  */
 const negate = sentence => sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
+
+/** QUESTIONS */
+
+/**
+ * Converts a statement (or a question) to a yes/no question
+ * Lowercases what was previously the first letter of the sentence, regardless of whether it's a name or not.
+ */
+const toQuestion = sentence => (sentence.substr(0, 4) === '^Cu ' ? sentence : '^Cu ' + sentence.charAt(0).toLowerCase() + sentence.substr(1)).split('?').join('').split('.').join('') + '?'
