@@ -11,10 +11,10 @@ const adverbize = word => word.slice(0, -1) + 'e'
 const definitize = noun => noun.substring(0, 3) === 'la ' ? noun : 'la ' + noun
 
 /**
- * Pluralizes all nouns or ajectives in a sentence
+ * Pluralizes all nouns or ajectives (subjects and objects) in a sentence
  * Currently doesn't handle commas or periods
  */
-const pluralize = words => words.split(' ').map(word => 'oa'.indexOf(word.substr(-1)) !== -1 ? word + 'j' : word).join(' ')
+const pluralize = words => words.split(' ').map(word => 'oa'.indexOf(word.substr(-1)) !== -1 ? word + 'j' : word.substr(-2) === 'on' || word.substr(-2) === 'an' ? word.slice(0,-1) + 'jn' : word).join(' ')
 
 /** PRONOUNS */
 
