@@ -39,13 +39,13 @@ const toInfinitive = verb => verb.substr(-2) === 'as' || verb.substr(-2) === 'is
  * Converts a verb to present tense.
  * Currently accepts base, infinitive, present and past tense
  */
-const toPresentTense = verb => verb.substr(-2) === 'as' ? verb : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb.slice(0, -1) + 'as' : verb + 'as'
+const toPresent = verb => verb.substr(-2) === 'as' ? verb : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb.slice(0, -1) + 'as' : verb + 'as'
 
 /**
  * Converts a verb to past tense.
  * Currently accepts base, infinitive, present and past tense
  */
-const toPastTense = verb =>  verb.substr(-2) === 'as' ? verb.slice(0, -2) + 'is' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb : verb + 'is'
+const toPast = verb =>  verb.substr(-2) === 'as' ? verb.slice(0, -2) + 'is' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb : verb + 'is'
 
 /** NEGATION */
 
@@ -53,7 +53,10 @@ const toPastTense = verb =>  verb.substr(-2) === 'as' ? verb.slice(0, -2) + 'is'
  * Adds ne before the first present tense verb in the sentence if any
  * Currently doesn't handle commas or periods
  */
-const negate = sentence => sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
+const negateSentence = sentence => sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
+
+/** Adds or removes mal in front of an adjective to yield opposite meaning */
+const reverseAdjective = adjective => adjective.substr(0,3) === 'mal' ? adjective.substr(3) : 'mal' + adjective
 
 /** QUESTIONS */
 
