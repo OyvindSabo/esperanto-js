@@ -53,3 +53,15 @@ const toInfinitive = (verb) => {
 const toPresentTense = (verb) => {
   return verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'as' ? verb : verb + 'as'
 }
+
+/** NEGATION */
+
+/**
+ * Adds ne before the first present tense verb in the sentence if any
+ * Currently doesn't handle commas or periods
+ */
+const negate = (sentence) => {
+  return sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
+}
+
+console.log(negate('estas alta'))
