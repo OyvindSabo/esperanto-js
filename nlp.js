@@ -1,4 +1,6 @@
 
+/** NOUNS */
+
 /** Turns a noun or an adverb (or an adjective) into an adjective */
 const adjectivize = (word) => {
   return word.slice(0, -1) + 'a'
@@ -21,6 +23,15 @@ const definitize = (noun) => {
 const pluralize = (words) => {
   return words.split(' ').map(word => 'oa'.indexOf(word.substr(-1)) !== -1 ? word + 'j' : word).join(' ')
 }
+
+/** PRONOUNS */
+
+/** Adds an a to the end of a pronoun if it's not already there */
+const toPossessive = (pronoun) => {
+  return pronoun.substr(-1) === 'a' ? pronoun : pronoun + 'a'
+}
+
+/** VERBS */
 
 /** Stems the verb i.e. finds the base (dictionary form) of the verb */
 const toBase = (verb) => {
