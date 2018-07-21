@@ -11,6 +11,12 @@ const adverbize = word => word.slice(0, -1) + 'e'
 const definitize = noun => noun.substring(0, 3) === 'la ' ? noun : 'la ' + noun
 
 /**
+ * Adds an n to any combination of nouns and adjectives which are not already objects
+ * Currently doesn't handle commas and periods
+ */
+const objectify = words => words.split(' ').map(word => word.substr(-1) === 'o' || word.substr(-1) === 'a' || word.substr(-2) === 'oj' || word.substr(-2) === 'aj' ? word + 'n' : word).join(' ')
+
+/**
  * Pluralizes all nouns or ajectives (subjects and objects) in a sentence
  * Currently doesn't handle commas or periods
  */
@@ -53,10 +59,10 @@ const toPast = verb =>  verb.substr(-2) === 'as' ? verb.slice(0, -2) + 'is' : ve
  * Adds ne before the first present tense verb in the sentence if any
  * Currently doesn't handle commas or periods
  */
-const negateSentence = sentence => sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
+const negate = sentence => sentence.split(' ').map((word, index) => word.substr(-2) === 'as' ? 'ne ' + word : word).join(' ')
 
 /** Adds or removes mal in front of an adjective to yield opposite meaning */
-const reverseAdjective = adjective => adjective.substr(0,3) === 'mal' ? adjective.substr(3) : 'mal' + adjective
+const toOpposite = adjective => adjective.substr(0,3) === 'mal' ? adjective.substr(3) : 'mal' + adjective
 
 /** QUESTIONS */
 
