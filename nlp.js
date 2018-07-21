@@ -31,27 +31,34 @@ const toPossessive = pronoun => pronoun.substr(-1) === 'a' ? pronoun : pronoun +
 
 /**
  * Stems the verb i.e. finds the base (dictionary form) of the verb
- * Currently accepts base, infinitive, present and past tense
+ * Currently accepts base, infinitive, present, past and future tense
  */
-const toBase = (verb) => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' ? verb.slice(0, -2) : verb.substr(-1) === 'i' ? verb.slice(0, -1) :  verb
+const toBase = (verb) => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' || verb.substr(-2) === 'os' ? verb.slice(0, -2) : verb.substr(-1) === 'i' ? verb.slice(0, -1) :  verb
 
 /**
  * Converts a verb to infinitive
- * Currently only accepts base, infinitive and present tense
+ * Currently only accepts base, infinitive, present, past and future tense
  */
-const toInfinitive = verb => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' ? verb.slice(0,-2) + 'i' : verb.substr(-1) === 'i' ? verb : verb + 'i'
+const toInfinitive = verb => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' || verb.substr(-2) === 'os' ? verb.slice(0,-2) + 'i' : verb.substr(-1) === 'i' ? verb : verb + 'i'
 
 /**
- * Converts a verb to present tense.
- * Currently accepts base, infinitive, present and past tense
+ * Converts a verb to present tense
+ * Currently accepts base, infinitive, present, past and future tense
  */
-const toPresent = verb => verb.substr(-2) === 'as' ? verb : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb.slice(0, -1) + 'as' : verb + 'as'
+const toPresent = verb => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' || verb.substr(-2) === 'os' ? verb.slice(0, -2) + 'as' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb + 'as'
 
 /**
- * Converts a verb to past tense.
- * Currently accepts base, infinitive, present and past tense
+ * Converts a verb to past tense
+ * Currently accepts base, infinitive, present, past and future tense
+ * The input parameter has to be a verb
  */
-const toPast = verb =>  verb.substr(-2) === 'as' ? verb.slice(0, -2) + 'is' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'as' : verb.substr(-2) === 'is' ? verb : verb + 'is'
+const toPast = verb =>  verb.substr(-2) === 'as' || verb.substr(-2) === 'is' || verb.substr(-2) === 'os' ? verb.slice(0, -2) + 'is' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'is' : verb + 'is'
+
+/**
+ * Converts a verb to future tense
+ * Currently accepts base, infinitive, present, past and future tense
+ */
+const toFuture = verb => verb.substr(-2) === 'as' || verb.substr(-2) === 'is' || verb.substr(-2) === 'os' ? verb.slice(0, -2) + 'os' : verb.substr(-1) === 'i' ? verb.slice(0, -1) + 'os' : verb
 
 /** NEGATION */
 
