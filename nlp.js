@@ -78,3 +78,51 @@ const toOpposite = adjective => adjective.substr(0,3) === 'mal' ? adjective.subs
  * Lowercases what was previously the first letter of the sentence, regardless of whether it's a name or not.
  */
 const toQuestion = sentence => (sentence.substr(0, 4) === '^Cu ' ? sentence : '^Cu ' + sentence.charAt(0).toLowerCase() + sentence.substr(1)).split('?').join('').split('.').join('') + '?'
+
+/** NUMBERS */
+
+/**
+ * Converts a numerical number to a verbal representation of that number
+ * Currently accepts numbers from  to 999.999 where a period is required for every three digits.
+ */
+const toVerbal = (numerical) => {
+  const toVerb = {
+    '0': 'nul',
+    '1': 'unu',
+    '2': 'du',
+    '3': 'tri',
+    '4': 'kvar',
+    '5': 'kvin',
+    '6': 'sis',
+    '7': 'sep',
+    '8': 'ok',
+    '9': 'naŭ',
+  }
+  return numerical.toString()
+  .split('.')
+  .map(number => '000'.substr(0, 3-number.length) + number)
+  .map(number => number.split('')
+    .map(
+      (element, index) => index === 0
+      ? (element !== '0'
+        ? element === '1' ? 'cent' : toVerb[element] + 'cent'
+        : '')
+      : index === 1
+      ? (element !== '0'
+        ? element === '1' ? 'dec' : toVerb[element] + 'dec'
+        : '')
+      : (element !== '0'
+        ? toVerb[element]
+        : '')
+      ).map(number => number === 'unu' ? '' : number)
+    .join(' '))
+  .join(' mil ').split('   ').join(' ').split('  ').join(' ')
+  
+}
+
+const toNumerical = (verbal) => {
+  numToVerb = {
+    'nul': '0',
+  }
+  //TODO
+}
