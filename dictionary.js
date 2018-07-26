@@ -8,34 +8,36 @@ const englishToEsperanto = (englishWord) => {
     'and': 'kaj',
     'to appear': 'aspekti',
     'apple': 'pomo',
-    'author': 'autoro', //the u in autoro is the Esperanto u with a weird accent on top
+    'author': 'aŭtoro',
     // B
     'banana': 'banano',
     'to be able to': 'povi',
     'bread': 'pano',
     'boy': 'knabo',
     'to be': 'esti',
-    'beach': 'pla^go',
+    'beach': 'plaĝo',
     'bear': 'urso',
     'beautiful': 'bela',
     'big': 'granda',
     // C
-    'car': 'auto', //the u in auto is the Esperanto u with a weird accent on top
+    'car': 'aŭto',
     'cat': 'kato',
-    'chair': 'se^go',
-    'chameleon': '^hameleono',
+    'chair': 'seĝo',
+    'chameleon': 'ĥameleono',
     'child': 'infano',
     'clean': 'pura',
     'coffee': 'kafo',
     // D
     'to derive': 'derivi',
+    'to desire': 'deziri',
     'to do': 'fari',
     'dog': 'hundo',
     'to drink': 'trinki',
     'dry': 'seka',
     // E
     'easy': 'facil',
-    'to eat': 'man^gi',
+    'to eat': 'manĝi',
+    'eight': 'ok',
     'elephant': 'elefanto',
     'ending': 'finajo',
     'to enhance': 'plibonigi',
@@ -44,40 +46,46 @@ const englishToEsperanto = (englishWord) => {
     // F
     'fast': 'rapida',
     'female': 'ino',
+    'five': 'kvin',
+    'four': 'kvar',
     'friend': 'amiko',
     'to fly': 'flugi',
     'for': 'por',
     // G
-    'garden': '^gardeno',
+    'garden': 'ĝardeno',
     'to give': 'doni',
     'good': 'bona',
     'guitar': 'gitaro',
     // H
     'hand': 'mano',
-    'happy': 'feli^ca',
+    'happy': 'feliĉa',
     'to have': 'havi',
     'he': 'li',
-    'horse': '^cevalo',
+    'hello': 'saluton',
+    'horse': 'ĉevalo',
     'house': 'domo',
     // I
     'I': 'mi',
-    'it': '^gi',
+    'it': 'ĝi',
     // J
-    'jazz': '^jazo',
+    'jazz': 'ĵazo',
     // K
     // L
     'leaf': 'folio',
-    'to like': '^sati',
+    'to like': 'ŝati',
     'long': 'longa',
     'to love': 'ami',
     // M
     'man': 'viro',
     'milk': 'lakto',
     'more': 'pli',
+    'to must': 'devi',
     // N
     'name': 'nomo',
+    'nine': 'naŭ',
     'no': 'ne',
     // O
+    'one': 'unu',
     'onion': 'cepo',
     // P
     'pizza': 'pico',
@@ -86,28 +94,34 @@ const englishToEsperanto = (englishWord) => {
     'to run': 'kuri',
     // S
     'salt': 'salo',
-    'she': '^si',
-    'sheep': '^safo',
+    'seven': 'sep',
+    'she': 'ŝi',
+    'sheep': 'ŝafo',
+    'six': 'ses',
     'soft': 'mola',
     'to sleep': 'dormi',
-    'sweet': 'dol^ca',
+    'sweet': 'dolĉa',
     // T
     'table': 'tablo',
     'to take steps': 'klopodi',
+    'ten': 'dek',
     'that': 'tio',
     'the': 'la',
     'they': 'ili',
+    'three': 'tri',
     'time': 'tempo',
     'to': 'al',
     'tree': 'arbo',
+    'two': 'du',
     // U
     'umbrella': 'ombrelo',
-    'until': '^gis',
+    'until': 'ĝis',
     'to use': 'uzi',
     // V
     'violin': 'violono',
     // W
-    'to walk': 'mar^si',
+    'to walk': 'marŝi',
+    'to want': 'voli',
     'warm': 'varma',
     'water': 'akvo',
     'we': 'ni',
@@ -122,6 +136,7 @@ const englishToEsperanto = (englishWord) => {
     'young': 'juna',
     // Z
     'zebra': 'zebro',
+    'zero': 'nul',
   }
   return dictionary[englishWord];
 }
@@ -136,8 +151,8 @@ const esperantoToEnglish = (esperantoWord) => {
     'amiko': 'friend',
     'arbo': 'tree',
     'aspekti': 'to appear',
-    'auto': 'car', //the u in auto is the Esperanto u with a weird accent on top
-    'autoro': 'author', //the u in autoro is the Esperanto u with a weird accent on top
+    'aŭto': 'car',
+    'aŭtoro': 'author',
     // B
     'banano': 'banana',
     'bela': 'beautiful',
@@ -145,14 +160,18 @@ const esperantoToEnglish = (esperantoWord) => {
     // C
     'celi': 'aim',
     'cepo': 'onion',
-    // ^C
-    '^cevalo': 'horse',
+    // Ĉ
+    'ĉevalo': 'horse',
     // D
+    'dek': 'ten',
     'derivi': 'to derive',
-    'dol^ca': 'sweet',
+    'devi': 'to must',
+    'deziri': 'to desire',
+    'dolĉa': 'sweet',
     'domo': 'house',
     'doni': 'to give',
     'dormi': 'to sleep',
+    'du': 'to',
     // E
     'ekzemplo': 'example',
     'elefanto': 'elephant',
@@ -161,7 +180,7 @@ const esperantoToEnglish = (esperantoWord) => {
     // F
     'facil': 'easy',
     'fari': 'to do',
-    'feli^ca': 'happy',
+    'feliĉa': 'happy',
     'fenestro': 'window',
     'finajo': 'ending',
     'flugi': 'to fly',
@@ -169,15 +188,15 @@ const esperantoToEnglish = (esperantoWord) => {
     // G
     'gitaro': 'guitar',
     'granda': 'big',
-    //^G
-    '^gardeno': 'garden',
-    '^gi': 'it',
-    '^gis': 'until',
+    //Ĝ
+    'ĝardeno': 'garden',
+    'ĝi': 'it',
+    'ĝis': 'until',
     // H
     'havi': 'to have',
     'hundo': 'dog',
-    // ^H
-    '^hameleono': 'chameleon',
+    // Ĥ
+    'ĥameleono': 'chameleon',
     // I
     'ili': 'they',
     'infano': 'child',
@@ -186,7 +205,8 @@ const esperantoToEnglish = (esperantoWord) => {
     'jam': 'already',
     'jes': 'yes',
     'juna': 'young',
-    '^jazo': 'jazz',
+    // ĵ
+    'ĵazo': 'jazz',
     // K
     'kafo': 'coffee',
     'kaj': 'and',
@@ -195,29 +215,34 @@ const esperantoToEnglish = (esperantoWord) => {
     'klopodi': 'to take steps',
     'knabo': 'boy',
     'kuri': 'to run',
+    'kvar': 'four',
+    'kvin': 'five',
     // L
     'la': 'the',
     'lakto': 'milk',
     'li': 'he',
     'longa': 'long',
     // M
-    'man^gi': 'to eat',
+    'manĝi': 'to eat',
     'mano': 'hand',
-    'mar^si': 'to walk',
+    'marŝi': 'to walk',
     'mola': 'soft',
     'mi': 'I',
     // N
-    'ni': 'we',
+    'naŭ': 'nine',
     'ne': 'no',
+    'ni': 'we',
     'nomo': 'name',
+    'nul': 'zero',
     // O
+    'ok': 'eight',
     'ombrelo': 'umbrella',
     // P
     'pano': 'bread',
     'pico': 'pizza',
-    'pla^go': 'beach',
+    'plaĝo': 'beach',
     'pli': 'more',
-    'pliboni^gi': 'to enhance',
+    'pliboniĝi': 'to enhance',
     'pomo': 'apple',
     'por': 'for',
     'povi': 'to be able to',
@@ -227,18 +252,23 @@ const esperantoToEnglish = (esperantoWord) => {
     'rizo': 'rice',
     // S
     'salo': 'salt',
-    'se^go': 'chair',
+    'saluton': 'hello',
+    'seĝo': 'chair',
     'seka': 'dry',
-    // ^S
-    '^safo': 'sheep',
-    '^sati': 'to like',
-    '^si': 'she',
+    'sep': 'seven',
+    'ses': 'six',
+    // Ŝ
+    'ŝafo': 'sheep',
+    'ŝati': 'to like',
+    'ŝi': 'she',
     // T
     'tablo': 'table',
     'tempo': 'time',
     'tio': 'that',
+    'tri': 'three',
     'trinki': 'to drink',
     // U
+    'unu': 'one',
     'urso': 'bear',
     'uzi': 'to use',
     // V
@@ -247,6 +277,7 @@ const esperantoToEnglish = (esperantoWord) => {
     'violono': 'violin',
     'viro': 'man',
     'virino': 'woman',
+    'voli': 'to want',
     'vorto': 'word',
     // Z
     'zebro': 'zebra',
