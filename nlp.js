@@ -22,6 +22,11 @@ const objectify = words => words.split(' ').map(word => word.substr(-1) === 'o' 
  */
 const pluralize = words => words.split(' ').map(word => 'oa'.indexOf(word.substr(-1)) !== -1 ? word + 'j' : word.substr(-2) === 'on' || word.substr(-2) === 'an' ? word.slice(0,-1) + 'jn' : word).join(' ')
 
+/**
+ * Makes a noun feminine
+ */
+const toFeminine = noun => noun.substr(-1) === 'o' ? noun.slice(0, -1) + 'ino' : noun
+
 /** PRONOUNS */
 
 /** Adds an a to the end of a pronoun if it's not already there */
