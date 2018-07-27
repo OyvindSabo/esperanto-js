@@ -27,6 +27,11 @@ const pluralize = words => words.split(' ').map(word => 'oa'.indexOf(word.substr
  */
 const toFeminine = noun => noun.substr(-1) === 'o' ? noun.slice(0, -1) + 'ino' : noun
 
+/**
+ * Makes a noun include both genders
+ */
+const toBothGenders = noun => noun.substr(-1) === 'o' || noun.substr(-2) === 'oj' ? (noun.substr(0, 2) === 'ge' ? noun : 'ge' + noun) + (noun.substr(-1) === 'o' ? 'j': '') : noun
+
 /** PRONOUNS */
 
 /** Adds an a to the end of a pronoun if it's not already there */
