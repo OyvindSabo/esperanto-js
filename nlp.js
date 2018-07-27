@@ -29,6 +29,7 @@ const toFeminine = noun => noun.substr(-1) === 'o' ? noun.slice(0, -1) + 'ino' :
 
 /**
  * Makes a noun include both genders
+ * Currently only accepts nouns which are not feminine.
  */
 const toBothGenders = noun => noun.substr(-1) === 'o' || noun.substr(-2) === 'oj' ? (noun.substr(0, 2) === 'ge' ? noun : 'ge' + noun) + (noun.substr(-1) === 'o' ? 'j': '') : noun
 
