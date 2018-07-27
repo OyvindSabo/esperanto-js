@@ -12,13 +12,16 @@ const englishToEsperanto = (englishWord) => {
     // B
     'banana': 'banano',
     'to be able to': 'povi',
-    'bread': 'pano',
-    'boy': 'knabo',
     'to be': 'esti',
     'beach': 'plaĝo',
     'bear': 'urso',
     'beautiful': 'bela',
     'big': 'granda',
+    'black': 'nigra',
+    'blue': 'blua',
+    'boy': 'knabo',
+    'bread': 'pano',
+    'brown': 'bruna',
     // C
     'car': 'aŭto',
     'cat': 'kato',
@@ -27,6 +30,7 @@ const englishToEsperanto = (englishWord) => {
     'child': 'infano',
     'clean': 'pura',
     'coffee': 'kafo',
+    'color': 'koloro',
     // D
     'to derive': 'derivi',
     'to desire': 'deziri',
@@ -55,6 +59,8 @@ const englishToEsperanto = (englishWord) => {
     'garden': 'ĝardeno',
     'to give': 'doni',
     'good': 'bona',
+    'green': 'verda',
+    'grey': 'griza',
     'guitar': 'gitaro',
     // H
     'hand': 'mano',
@@ -82,15 +88,22 @@ const englishToEsperanto = (englishWord) => {
     'to must': 'devi',
     // N
     'name': 'nomo',
+    'nigra': 'black',
     'nine': 'naŭ',
     'no': 'ne',
     // O
     'one': 'unu',
     'onion': 'cepo',
+    'orange': 'oranĝkolora',
+    'orange': 'oranĝo',
     // P
+    'pink': 'rozkolora',
     'pizza': 'pico',
+    'purple': 'purpura',
     // R
+    'red': 'ruĝa',
     'rice': 'rizo',
+    'rose': 'rozo',
     'to run': 'kuri',
     // S
     'salt': 'salo',
@@ -118,6 +131,8 @@ const englishToEsperanto = (englishWord) => {
     'until': 'ĝis',
     'to use': 'uzi',
     // V
+    'violet': 'violkolora',
+    'violet': 'violo',
     'violin': 'violono',
     // W
     'to walk': 'marŝi',
@@ -126,11 +141,13 @@ const englishToEsperanto = (englishWord) => {
     'water': 'akvo',
     'we': 'ni',
     'what': 'kio',
+    'white': 'blanka',
     'window': 'fenestro',
     'woman': 'virino',
     'word': 'vorto',
     // X
     // Y
+    'yellow': 'flava',
     'yes': 'jes',
     'you': 'vi',
     'young': 'juna',
@@ -156,7 +173,10 @@ const esperantoToEnglish = (esperantoWord) => {
     // B
     'banano': 'banana',
     'bela': 'beautiful',
+    'blanka': 'white',
+    'blua': 'blue',
     'bona': 'good',
+    'bruna': 'brown',
     // C
     'celi': 'aim',
     'cepo': 'onion',
@@ -183,11 +203,13 @@ const esperantoToEnglish = (esperantoWord) => {
     'feliĉa': 'happy',
     'fenestro': 'window',
     'finajo': 'ending',
+    'flava': 'yellow',
     'flugi': 'to fly',
     'folio': 'leaf',
     // G
     'gitaro': 'guitar',
     'granda': 'big',
+    'griza': 'grey',
     //Ĝ
     'ĝardeno': 'garden',
     'ĝi': 'it',
@@ -214,6 +236,7 @@ const esperantoToEnglish = (esperantoWord) => {
     'kio': 'what',
     'klopodi': 'to take steps',
     'knabo': 'boy',
+    'koloro': 'color',
     'kuri': 'to run',
     'kvar': 'four',
     'kvin': 'five',
@@ -237,6 +260,8 @@ const esperantoToEnglish = (esperantoWord) => {
     // O
     'ok': 'eight',
     'ombrelo': 'umbrella',
+    'oranĝkolora': 'orange',
+    'oranĝo': 'orange',
     // P
     'pano': 'bread',
     'pico': 'pizza',
@@ -247,9 +272,13 @@ const esperantoToEnglish = (esperantoWord) => {
     'por': 'for',
     'povi': 'to be able to',
     'pura': 'clean',
+    'purpura': 'purple',
     // R
     'rapida': 'fast',
     'rizo': 'rice',
+    'rozkolora': 'pink',
+    'rozo': 'rose',
+    'ruĝa': 'red',
     // S
     'salo': 'salt',
     'saluton': 'hello',
@@ -273,7 +302,10 @@ const esperantoToEnglish = (esperantoWord) => {
     'uzi': 'to use',
     // V
     'varma': 'warm',
+    'verda': 'green',
     'vi': 'you',
+    'violkolora': 'violet',
+    'violo': 'violet',
     'violono': 'violin',
     'viro': 'man',
     'virino': 'woman',
