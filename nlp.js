@@ -121,8 +121,5 @@ const toVerbal = (numerical) => {
 }
 
 const toNumerical = (verbal) => {
-  numToVerb = {
-    'nul': '0',
-  }
   //TODO
 }
